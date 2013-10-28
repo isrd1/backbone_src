@@ -19,6 +19,7 @@ $session = Session::getInstance();
  * connect to the database
  */
 $db = ApplicationRegistry::DB();
+
 /**
  * whatever is returned it'll be json, so set the header to the correct type
  */
