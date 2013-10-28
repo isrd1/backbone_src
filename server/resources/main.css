@@ -1,0 +1,78 @@
+@CHARSET "UTF-8";
+body {
+    font-family: arial, helvetica, sans-serif;
+    margin: 2%;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-color: #369;
+    border-bottom: thin solid #369;
+}
+
+table {
+    border: thin solid #ccc;
+    margin: 1% auto;
+}
+
+tr { vertical-align: top}
+th {
+    text-align: center;
+    font-weight: bold;
+    color: #369;
+    background-color: #ddd;
+    padding: 0 0.25em;
+}
+
+td {
+    border: thin dotted #ccc;
+    padding: 0 0.25em;
+}
+
+.error {
+    font-weight: bold;
+    color: red;
+ }
+ 
+ fieldset {
+    width: 80%;
+    margin: 1em auto;
+ }
+ 
+ legend {
+    font-style: italic;
+ }
+ 
+ .wrapper {
+     position: relative;
+     width: 80%;
+     margin: 0 auto;
+     border: thin solid blue;
+ }
+ #menu {
+    position: absolute;
+    top: 1em;
+    left: 0;
+    width: 150px;
+ }
+ #menu a {
+    display: block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+ }
+ #menu a:hover {
+     background-color: #eee;
+ }
+ #content{
+    margin: 0 200px 0 150px;
+    padding: 1em;
+    border: thin dotted #ccc;
+    border-width: 0 1px 0 1px;
+ }
+ #sidebar {
+    position: absolute;
+    top: 1em;
+    right: 5px;
+    width: 150px;
+    padding: 0.5em;
+}
