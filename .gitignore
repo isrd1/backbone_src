@@ -7,12 +7,7 @@ config.json.php
 .buildpath
 .idea
 out/
-yuidoc.json
-server/config/config.*
-server/examples/
-config.json.php
 lib/
-resources/
 *.uml
 log.txt
 
