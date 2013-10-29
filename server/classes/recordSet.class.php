@@ -97,12 +97,13 @@ class JSONRecordSet extends R_RecordSet {
      */
     function getRecordSet($sql, $elementName = "ResultSet", $params = null) {
         $stmt     = parent::getRecordSet($sql, $params);
-        $nRecords = $stmt->columnCount(); // use columnCount because rowCount doesn't work with sqlite
+        $recordSet = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $nRecords = count($recordSet);
         if ($nRecords == 0) {
             return false;
         }
         else {
-            return '{"status":"ok", "' . $elementName . '" :{"RowCount":' . $nRecords . ',"Result":' . json_encode($stmt->fetchAll(PDO::FETCH_ASSOC)) . '}}';
+            return '{"status":"ok", "' . $elementName . '" :{"RowCount":' . $nRecords . ',"Result":' . json_encode($recordSet) . '}}';
         }
     }
 }
