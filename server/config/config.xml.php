@@ -1,9 +1,9 @@
 <?php
 /*
 <config>
-   <username>srsUser</username>
-   <password>password</password>
-   <dns>mysql:host=localhost;dbname=backbone_srs</dns>
+   <username></username>
+   <password></password>
+   <dns>sqlite:db/backbone_srs.sqlite</dns>
 </config>
 */
 ?>

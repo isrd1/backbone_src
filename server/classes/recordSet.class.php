@@ -97,7 +97,7 @@ class JSONRecordSet extends R_RecordSet {
      */
     function getRecordSet($sql, $elementName = "ResultSet", $params = null) {
         $stmt     = parent::getRecordSet($sql, $params);
-        $nRecords = $stmt->rowCount();
+        $nRecords = $stmt->columnCount(); // use columnCount because rowCount doesn't work with sqlite
         if ($nRecords == 0) {
             return false;
         }

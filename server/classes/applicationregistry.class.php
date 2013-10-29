@@ -186,9 +186,15 @@ Class ApplicationRegistry extends Registry {
     public function __destruct() {
         if ($this->dirty === true) {
             $temp = serialize($this->values);
-            $h    = fopen(CONFIGLOCATION . '.freeze', 'w');
-            fwrite($h, $temp);
-            fclose($h);
+            try {
+                $h    = @fopen(CONFIGLOCATION . '.freeze', 'wb');
+                if ($h !== false) {
+                    fwrite($h, $temp);
+                    fclose($h);
+                }
+            } catch (Exception $e) {
+                // couldn't write file but just keep quiet, probably because the config directory isn't writeable
+            }
             $this->dirty = false;
         }
     }

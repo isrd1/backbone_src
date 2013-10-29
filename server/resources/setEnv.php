@@ -11,7 +11,7 @@ error_reporting(-1); // show all errors
 /**
  * Set up environment change this to the path for your config.xml.php file which contains the db connection information
  */
-$rootPath = '/pathToApplication/backbone_srs';
+$rootPath = '/Users/isrd1/Dropbox/web/backbone_srs';
 
 define('CONFIGLOCATION', "$rootPath/server/config/config.xml.php");
 // turn on all possible errors
