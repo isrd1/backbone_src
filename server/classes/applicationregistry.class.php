@@ -187,7 +187,7 @@ Class ApplicationRegistry extends Registry {
         if ($this->dirty === true) {
             $temp = serialize($this->values);
             try {
-                $h    = @fopen(CONFIGLOCATION . '.freeze', 'wb');
+                $h = @fopen(CONFIGLOCATION . '.freeze', 'wb');
                 if ($h !== false) {
                     fwrite($h, $temp);
                     fclose($h);
